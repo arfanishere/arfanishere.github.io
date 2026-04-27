@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Six Marching | Precision &amp; Pageantry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#435b9f",
+                        "secondary-fixed": "#ffe088",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#fed65b",
+                        "primary-container": "#002366",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "surface-dim": "#dadada",
+                        "secondary": "#735c00",
+                        "on-surface-variant": "#444650",
+                        "background": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c5c6d2",
+                        "tertiary-fixed-dim": "#b6c6f0",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#758dd5",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#745c00",
+                        "primary": "#00113a",
+                        "on-background": "#1a1c1c",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#757682",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error": "#ffffff",
+                        "tertiary": "#011334",
+                        "on-tertiary-container": "#7f90b7",
+                        "surface-container": "#eeeeee",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "inverse-primary": "#b3c5ff",
+                        "on-tertiary-fixed": "#071a3b",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#172849",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-primary-fixed": "#00174a",
+                        "on-tertiary-fixed-variant": "#364669",
+                        "inverse-surface": "#2f3131",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layering { transition: background-color 0.3s ease; }
+        .no-border { border: none !important; }
+        .glass-nav { backdrop-filter: blur(20px); }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-10{bottom:-2.5rem}.-right-10{right:-2.5rem}.bottom-10{bottom:2.5rem}.left-1\/2{left:50%}.right-0{right:0px}.top-0{top:0px}.-z-10{z-index:-10}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-24{margin-bottom:6rem}.mb-32{margin-bottom:8rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-4{margin-top:1rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1 / 1}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-64{height:16rem}.h-\[2px\]{height:2px}.h-\[400px\]{height:400px}.h-\[450px\]{height:450px}.h-\[470px\]{height:470px}.h-full{height:100%}.min-h-\[1024px\]{min-height:1024px}.w-1\/3{width:33.333333%}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-24{width:6rem}.w-64{width:16rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-20{--tw-translate-x:5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-3{--tw-rotate:3deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.skew-x-12{--tw-skew-x:12deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-20{gap:5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.-space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(-1rem * var(--tw-space-x-reverse));margin-left:calc(-1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:0.125rem}.rounded-2xl{border-radius:1rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:0.75rem}.rounded-lg{border-radius:0.25rem}.rounded-xl{border-radius:0.5rem}.border-4{border-width:4px}.border-b-2{border-bottom-width:2px}.border-b-4{border-bottom-width:4px}.border-secondary-fixed{--tw-border-opacity:1;border-color:rgb(255 224 136 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.bg-background{--tw-bg-opacity:1;background-color:rgb(249 249 249 / var(--tw-bg-opacity, 1))}.bg-on-secondary-fixed{--tw-bg-opacity:1;background-color:rgb(36 26 0 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(0 17 58 / var(--tw-bg-opacity, 1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(0 35 102 / var(--tw-bg-opacity, 1))}.bg-secondary-container{--tw-bg-opacity:1;background-color:rgb(254 214 91 / var(--tw-bg-opacity, 1))}.bg-secondary-fixed{--tw-bg-opacity:1;background-color:rgb(255 224 136 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-surface{--tw-bg-opacity:1;background-color:rgb(249 249 249 / var(--tw-bg-opacity, 1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(238 238 238 / var(--tw-bg-opacity, 1))}.bg-surface-container-highest{--tw-bg-opacity:1;background-color:rgb(226 226 226 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(243 243 243 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/70{background-color:rgb(255 255 255 / 0.7)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-primary{--tw-gradient-from:#00113a var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 17 58 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-primary\/90{--tw-gradient-from:rgb(0 17 58 / 0.9) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 17 58 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-primary-container{--tw-gradient-to:#002366 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-10{padding:2.5rem}.p-12{padding:3rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-12{padding-left:3rem;padding-right:3rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-32{padding-top:8rem;padding-bottom:8rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:0.25rem}.pb-2{padding-bottom:0.5rem}.pt-20{padding-top:5rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-body{font-family:Manrope}.font-headline{font-family:Space Grotesk}.font-label{font-family:Manrope}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-9xl{font-size:8rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-on-background{--tw-text-opacity:1;color:rgb(26 28 28 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-secondary-container{--tw-text-opacity:1;color:rgb(116 92 0 / var(--tw-text-opacity, 1))}.text-on-secondary-fixed{--tw-text-opacity:1;color:rgb(36 26 0 / var(--tw-text-opacity, 1))}.text-on-secondary-fixed-variant{--tw-text-opacity:1;color:rgb(87 69 0 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(68 70 80 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(0 17 58 / var(--tw-text-opacity, 1))}.text-primary-fixed-dim{--tw-text-opacity:1;color:rgb(179 197 255 / var(--tw-text-opacity, 1))}.text-secondary{--tw-text-opacity:1;color:rgb(115 92 0 / var(--tw-text-opacity, 1))}.text-secondary-fixed{--tw-text-opacity:1;color:rgb(255 224 136 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-10{opacity:0.1}.opacity-20{opacity:0.2}.opacity-5{opacity:0.05}.opacity-80{opacity:0.8}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.brightness-\[0\.4\]{--tw-brightness:brightness(0.4);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.duration-700{transition-duration:700ms}.selection\:bg-secondary-container *::selection{--tw-bg-opacity:1;background-color:rgb(254 214 91 / var(--tw-bg-opacity, 1))}.selection\:text-on-secondary-container *::selection{--tw-text-opacity:1;color:rgb(116 92 0 / var(--tw-text-opacity, 1))}.selection\:bg-secondary-container::selection{--tw-bg-opacity:1;background-color:rgb(254 214 91 / var(--tw-bg-opacity, 1))}.selection\:text-on-secondary-container::selection{--tw-text-opacity:1;color:rgb(116 92 0 / var(--tw-text-opacity, 1))}.hover\:-translate-y-2:hover{--tw-translate-y:-0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:rotate-0:hover{--tw-rotate:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-95:hover{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-primary{--tw-text-opacity:1;color:rgb(0 17 58 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:grayscale-0{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}}@media (min-width: 768px){.md\:flex{display:flex}.md\:w-1\/2{width:50%}.md\:flex-row{flex-direction:row}.md\:space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.md\:p-24{padding:6rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-8xl{font-size:6rem;line-height:1}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:-translate-y-12{--tw-translate-y:-3rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.lg\:translate-y-8{--tw-translate-y:2rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}}</style></head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto tonal-layering no-border">
+<div class="text-2xl font-bold tracking-tighter text-blue-900 font-headline">Six Marching</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-blue-900 border-b-2 border-yellow-500 pb-1 font-headline tracking-tight hover:text-blue-700 transition-colors" href="#home">Beranda</a>
+<a class="text-slate-600 font-headline tracking-tight hover:text-blue-700 transition-colors" href="#information">Informasi</a>
+<a class="text-slate-600 font-headline tracking-tight hover:text-blue-700 transition-colors" href="#performers">Pemain</a>
+<a class="text-slate-600 font-headline tracking-tight hover:text-blue-700 transition-colors" href="#contact">Hubungi Kami</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-headline font-medium hover:scale-95 duration-200 transition-all">Gabung ke Band</button>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[1024px] flex items-center justify-center overflow-hidden pt-20" data-stitch-vh="min-h-[1024px]===min-h-screen" id="home">
+<div class="absolute inset-0 z-0">
+<img alt="Marching Band Performance" class="w-full h-full object-cover brightness-[0.4]" data-alt="dramatic wide shot of a marching band in full uniform performing on a stadium field under bright floodlights at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp3AXHQm_ZFbCsQDykReG4VF8cyq6u09MisOmhYvxBqqbd1ZF3U7N_dVpkEnxEKA_qj8_WEp4QjPo27aEAgdgDMQwzrZRjBHxJIkFh8NuyK5GxNJExNbK5zSYotsic2rSNsXCwW7gISpE1UAs01abXgkz39xX1Wlakaw2MtHiBcEuV-shiMAqKcJaUtjv_sPQBrgtVe1yQojMSnxVpp8rS3B8XECZxNsjmoVct7HjZXPfP7rzH8f3nVDq30KeagAo-ZRvn4earQk_O"/>
+</div>
+<div class="relative z-10 max-w-5xl px-8 text-center">
+<span class="inline-block py-1 px-4 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs tracking-[0.2em] font-bold uppercase">EST. 2024</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold text-white tracking-tighter mb-8 leading-none">PRESISI <br/> <span class="text-secondary-fixed">DALAM GERAKAN</span></h1>
+<p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">Rasakan ritme yang menggelegar dan kemegahan visual dari Six Marching. Di mana disiplin bertemu dengan seni lapangan yang eksplosif.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-lg font-headline font-bold text-lg hover:scale-95 transition-transform flex items-center justify-center gap-2 shadow-2xl" href="#performers">Jelajahi Tentang kami<span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Information Section -->
+<section class="py-32 bg-surface" id="information">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-square rounded-xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Band Equipment" class="w-full h-full object-cover" data-alt="close up of polished brass instruments and drum sets lined up ready for a championship performance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAICRs2OMv-nFcoe43EZ4XiZ2Q-fRTSltEetvdWiYupQll4-jkOFCyhb7sYMCe0-6ogU_1UQwYXDfie-7_4TlBHeyhi-2KTZk8Zlmfy--BFr1aLL0ubSvLbnHeJ32haUQuZLWbeKfFf5SsWZ8HQziwQb2aQjksCWandJFZbMvUzL6BTCNhMofhRH4Yjb-U6fHKrMUARU80tEs2NC28Ul7hbdluRwLrD76c2HFyd4fl5B0_3fNGoUNycVWgZza6odgCN6BtkVfv4o9Yq"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary rounded-xl -z-10 opacity-10"></div>
+</div>
+<div class="space-y-8">
+<div class="inline-block border-b-4 border-secondary-fixed pb-2">
+<h2 class="font-headline text-4xl font-extrabold text-primary tracking-tight">Dari kami</h2>
+</div>
+<p class="text-lg text-on-surface-variant leading-relaxed">Six Marching bukan sekadar band; ini adalah bukti kekuatan sinkronisitas kolektif. Berdiri di atas prinsip performa High Cadence, ensembel kami telah tumbuh dari grup ritmik lokal menjadi kekuatan regional dalam seni pertunjukan.</p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="text-4xl font-headline font-bold text-primary mb-2">12+</div>
+<div class="text-sm font-label uppercase tracking-widest text-secondary font-bold">Ajakan dari luar sekolah</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="text-4xl font-headline font-bold text-primary mb-2">30+</div>
+<div class="text-sm font-label uppercase tracking-widest text-secondary font-bold">Anggota Aktif</div>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed"><br/></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Performers Grid (Bento Style) -->
+<section class="py-32 bg-surface-container" id="performers">
+<div class="max-w-7xl mx-auto px-8">
+<header class="text-center mb-24">
+<h2 class="font-headline text-5xl md:text-6xl font-extrabold text-primary tracking-tighter mb-4">ENSEMBEL KAMI</h2>
+<div class="h-1.5 w-24 bg-secondary-fixed mx-auto"></div>
+</header>
+<!-- Section: Pemain Drum -->
+<div class="mb-32">
+<h3 class="font-headline text-3xl font-bold text-primary mb-12 flex items-center gap-4">
+<span class="w-12 h-[2px] bg-primary"></span>
+                Pemain Drum
+            </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Drum Player 1 -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="aspect-[4/5] bg-surface-container-highest rounded-lg mb-6 overflow-hidden">
+<img alt="Bahrul" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of a focused male drummer in a marching band uniform holding sticks across a snare drum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcL0IWzq2TEpSW49GrKWecvNFSaU-WZVvLCnTo4GxmU219QEoZ6iRFBwCEz9ul8wxTSkQRUbOdEGrISPRgXr45XL8QbxsnqJrb-s7sVF0AJEhzMDPdDBaXReniYBLS-408_2cM3Cd34REO6uJsMNReqJ2ba_g1Hv7nH54GTLZKCbQdEoIzUzxn18sFY-LuANLXzJTG1SEqdXGSL_gcZZdo_Cka36Aq0aUtkleoH8lazL6urCipuhTxxgA1grbmQhZt_mOavrS7XytR"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary mb-1">Bahrul</h4>
+<p class="text-sm font-label text-secondary font-bold tracking-widest uppercase">Pemimpin Ritme</p>
+</div>
+<!-- Drum Player 2 -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 lg:translate-y-8">
+<div class="aspect-[4/5] bg-surface-container-highest rounded-lg mb-6 overflow-hidden">
+<img alt="Arfan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of a young man in marching attire with musical focus and intensity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKXLVFRzFJqkOXOhUpkQkanz9jiSEnae0w4JWXBlvq7X949_bVv7xEWLTgni6Wqh618MZAbu2Cx_QXusrYA71JVmGHyIQNtvKM62SwJVcVW_b8YiE5BvVhlAzs3zDllY37ybK__9trp-CHEniBgDiYhgMzj2RSHeTLgYkMoF5o_7b_dvZGCUZscFHGRs-AH_7nCf_Lomc_tg-NPUpucqFXvz8EiPxUYLH5bc5Hke4IW4TFgr1F5v6zjgZFZxo_spX9klWHteJCI4j-"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary mb-1">Arfan</h4>
+<p class="text-sm font-label text-secondary font-bold tracking-widest uppercase">Kadens Bass</p>
+</div>
+<!-- Drum Player 3 -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="aspect-[4/5] bg-surface-container-highest rounded-lg mb-6 overflow-hidden">
+<img alt="Ryan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of a musician holding drumsticks with a stadium background blurred" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOjUqSAHx3IChPbiOAwqY73CQisu-Dyz66FZl8XsBetJ1fYzRpkAG7tUgfd8m6Y0xZMSjsa19wDVt0HeVDt-9YywFSfPZXVBJGloeL741ciX1JkkY4FTJh7fptowObjCVEwMgOvnqD6c84kvHWf6cuyXUWZKypBov6e228RiuYEbavhK9IdHBaspJWfnWkEIeGPWmCqPs8q7nCFeOLpNgTfGAIq00pT7PB5vfsYEdbJbRwMeX75CpRUbsw9J955k_JPlXU0xx10Yqh"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary mb-1">Ryan</h4>
+<p class="text-sm font-label text-secondary font-bold tracking-widest uppercase">Pendukung Tenor</p>
+</div>
+<!-- Drum Player 4 -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 lg:translate-y-8">
+<div class="aspect-[4/5] bg-surface-container-highest rounded-lg mb-6 overflow-hidden">
+<img alt="Bayu" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="side profile of a drummer focusing during a performance rehearsal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwt5hlsGX3pkulf4H3TIIa0RV3uqPKtTeoJzukFTw098cbISn7VIHzJXWmrIF11GzNRXHZX85CaaNRr9kp4alu6kn72W1VFdgd9vkRh9Nj0RZRSztLv2b4QxxWbFeSPQ7GpFyvkygPXoLXeqEYw85cukpYHuOngU12E27_uKF0eg1wxuzImBsuXMo4RzCk2y_SfEk3J7QiH-wbPtb9qhASogQC29-Y-N5yqKiVSooM6ez0h74D731kWotKG7PFp1R38_YtkjqNc3oO"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary mb-1">Bayu</h4>
+<p class="text-sm font-label text-secondary font-bold tracking-widest uppercase">Perkusionis</p>
+</div>
+</div>
+</div>
+<!-- Section: Pemain Snare Drum -->
+<div class="mb-32">
+<h3 class="font-headline text-3xl font-bold text-primary mb-12 flex items-center justify-end gap-4 text-right">
+                Pemain Snare Drum
+                <span class="w-12 h-[2px] bg-primary"></span>
+</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Snare 1 -->
+<div class="relative group h-[450px] overflow-hidden rounded-xl">
+<img alt="Pandu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close up of snare drum musician in action with blurred lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd-Ish_ztplgmAd84t-UmsK9yDw0GhfpjFgF31H_Bxrnrt14IdTTQvfhQqgq0n4frpJBdWmqpm59ROpvdXojO1V1qyjfphS9Mr1aOIaunhHdInsMKccD_RxwjS6B5LDXHd00gC_dXfz8qe7I8X9aTZu7R4HKIAUufj76dItS-k00512C_85DDqWQrC-FLSJdGNkvDUS4gwYm7ESahaC0Tt34Y6GUnZ5TlFT9HR1iKCL6RloVQmrznojo7rAQJbFdJ3b9WRtQ_7VEz0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white font-headline text-2xl font-bold">Pandu</h4>
+<span class="text-secondary-fixed text-sm font-label tracking-widest uppercase font-bold">Pemimpin Seksi</span>
+</div>
+</div>
+<!-- Snare 2 -->
+<div class="relative group h-[450px] overflow-hidden rounded-xl lg:-translate-y-12">
+<img alt="Ridwan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="musician playing snare drum with focused expression in soft dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdtPfUeo_oFvnGQmZqHUKiYAuRDxXvqBBxXNpEH3-P8Jn7PbJq2FGKaMUUUC9nIaN31Wesgk_QYvP98kNlZxvxjVj2HDDBJPE0CLsr-c3u3uCRR6cyJtlais7xzdgnyZdcEEOCFRAHm6R99hK18WGs5Zsn4_tJOF4-8gUQE5zQCTvj2ZUtCRGhxLKV6sx8ww2gxT9YT_nrP64tu5WfLPL84W03R1p-DrNIuNDq-IQtlIFhbMu06UsM-lrO8WTEhTT3e533M2pWM6wv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white font-headline text-2xl font-bold">Ridwan</h4>
+<span class="text-secondary-fixed text-sm font-label tracking-widest uppercase font-bold">Solo Snare</span>
+</div>
+</div>
+<!-- Snare 3 -->
+<div class="relative group h-[450px] overflow-hidden rounded-xl">
+<img alt="Zainul" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="young performer with snare drum gear and uniform standing proudly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGbCQ7SJaJZmrZ1DZuFJ7wCiMQEqIEc7XoNTR33uJgMmMC-_fu61KHp8SrEu4dkGAzr2ifrCtQ6NEo3keDu61gsHyolxLk6W6PRz0ku0a9GofVHrafHX5FrMirocewfgAhDub4FoBAb1i3xaYHsQa2TqQKubX5q9mvlbUSlR1xca74z0Y3sPx4m4ITp-JjwZOEXxraY94MfyfSf-z52B1LnfDpXeuRP6eAKVJQ5ieLfFUt665gs8KXyFWN_qIEfUNPB_bm7bpbyQja"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white font-headline text-2xl font-bold">Zainul</h4>
+<span class="text-secondary-fixed text-sm font-label tracking-widest uppercase font-bold">Inti Ritmik</span>
+</div>
+</div>
+<!-- Snare 4 -->
+<div class="relative group h-[450px] overflow-hidden rounded-xl lg:-translate-y-12">
+<img alt="Elfa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="energetic snare drummer during a bright outdoor performance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Ii1mwFqhGKghV4p9zRRgfkE-FOYhspJYHM_2pdRWtWTCZNnQL5JFf78zl20oJlHdmUWeG8klUmLXsPdWBx7zaYUTbD6K6Nsz4CbJk79jSs2XZibGBee0F9OBqUE5PKMparSQ3dtLTtHeZFbGJ15iaeHAWmsECvTPdQ-ZhzuCGdcPVcXFa5D30XiAlU7nCN3KG0o_TY_dSYXQ8kFABYQ8H8WUkIWcPwNmfLFpJTdoliDSI7EhiMkWKQIzth2NRA7QCyfD-_J5qybt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white font-headline text-2xl font-bold">Elfa</h4>
+<span class="text-secondary-fixed text-sm font-label tracking-widest uppercase font-bold">Penjaga Tempo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Piano & Quarto (Asymmetric Layout) -->
+<div class="grid lg:grid-cols-5 gap-8">
+<!-- Piano Section -->
+<div class="lg:col-span-3">
+<h3 class="font-headline text-3xl font-bold text-primary mb-8 flex items-center gap-4">
+<span class="w-12 h-[2px] bg-primary"></span>
+                    Pemain Piano
+                </h3>
+<div class="bg-primary-container rounded-2xl p-1 items-center flex flex-col md:flex-row shadow-2xl overflow-hidden">
+<div class="w-full md:w-1/2 h-[400px]">
+<img alt="Piano Section" class="w-full h-full object-cover" data-alt="elegant dark grand piano keys in a moody concert hall lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUKjRcnhI6NRGno360p1KArB1YCrpc5jhOgehUb6jJimVDXqF9xWxHFC2PrbRLMQ0ihe3TKk-F4qtfjDT__Em8LnSEREbmo5pSkSSP-YrQTxpDry_Nz1kqphW8E-oOQbhRDiL67_vr4gGRjPipOBLr0zqtcDdV2VFSKrqJKbgLhumwYFL39967w3clcozoie4NH0m7pSjzfsqW8iVr6N9_dgR-KtWyXHptFkTWRMy2Muowf7bPAuBJIefCfXa8j0VP5Vg9WZXMReIM"/>
+</div>
+<div class="w-full md:w-1/2 p-12 text-on-primary">
+<span class="font-label text-xs tracking-widest text-secondary-fixed font-bold uppercase mb-4 block">Ahli Melodi</span>
+<h4 class="font-headline text-5xl font-bold mb-6">Ariel</h4>
+<p class="text-primary-fixed-dim leading-relaxed mb-8">Memberikan fondasi harmonis untuk Six Marching, Aril menjembatani kesenjangan antara keanggunan orkestra dan kekuatan lapangan.</p>
+<div class="flex items-center gap-2 text-secondary-fixed font-bold"><span class="material-symbols-outlined">star</span> Penampil Utama</div>
+</div>
+</div>
+</div>
+<!-- Quarto Section -->
+<div class="lg:col-span-2">
+<h3 class="font-headline text-3xl font-bold text-primary mb-8 flex items-center gap-4">
+<span class="w-12 h-[2px] bg-primary"></span>
+                    Pemain Quarto
+                </h3>
+<div class="bg-secondary-fixed h-[470px] rounded-2xl p-10 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl">music_note</span>
+</div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start gap-4 mb-6">
+<div class="flex-1">
+<span class="bg-on-secondary-fixed text-secondary-fixed px-3 py-1 rounded text-[10px] font-black uppercase tracking-tighter mb-4 inline-block">Kolaborasi</span>
+<h4 class="font-headline text-4xl font-bold text-on-secondary-fixed leading-none mt-2">Aril</h4>
+<p class="text-on-secondary-fixed-variant font-medium text-lg leading-tight mt-6">Pertunjukan multi-tenor dinamis yang melampaui batas kecepatan marching tradisional.</p>
+</div>
+<div class="w-32 h-40 bg-on-secondary-fixed/10 rounded-xl overflow-hidden border-2 border-on-secondary-fixed/20 shrink-0">
+<img alt="Aril Photo" class="w-full h-full object-cover grayscale" data-alt="portrait of a focused quarto player in uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwt5hlsGX3pkulf4H3TIIa0RV3uqPKtTeoJzukFTw098cbISn7VIHzJXWmrIF11GzNRXHZX85CaaNRr9kp4alu6kn72W1VFdgd9vkRh9Nj0RZRSztLv2b4QxxWbFeSPQ7GpFyvkygPXoLXeqEYw85cukpYHuOngU12E27_uKF0eg1wxuzImBsuXMo4RzCk2y_SfEk3J7QiH-wbPtb9qhASogQC29-Y-N5yqKiVSooM6ez0h74D731kWotKG7PFp1R38_YtkjqNc3oO"/>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-4 border-secondary-fixed bg-primary overflow-hidden">
+<img alt="P1" data-alt="avatar of performer 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFXGJwL5LVUlilNBgUvJ-NgkIryBNk9GOgNMlOzXTVY3--WlOdzMqXfKq19DEzV5mWroFFOIUlSjmb6Q9T79N3XFgmoN9fC1T0Bpfa82D7vWSnPG6XOnL-Nf8CBOkWOFp_xgZbayPrxefXaXS0kV64AZpM3OEPjGfkK6umC5VSd3ejXdL0Ve4NAi-rLo3TqQ576Lq9XLd2FFkY3wfoC3puaKWzpg48Blf0PTnQLZ6_7P0iNNW9JIRQVlauG6Nt0bUvqe-abEA53lt_"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-secondary-fixed bg-primary overflow-hidden">
+<img alt="P2" data-alt="avatar of performer 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkGJwb1DWYMaJqwSOH7m8LffnB7_NuVmhzFsPf2dCQDzbZkU8LR34uKRAi1lP4ClatgIKDwiIInsnuU9V1HcWRAlF0cpMFb0R-GIi5RF3PYxTxJLl5pbaYj5KOLaSKFYwqDvAzrZjO403jxc08PPsa0eHAQYouovD5ccyd8X_IkRuYnO5Xxshp9_VY1Hx31aQ7hC39cqWDIbTvj9O3YyrZmUg9oI_o52QkMFObII4fm6RunwyWZuG9lBQSMoPokMtGmRMb-emLhdOv"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-secondary-fixed bg-surface-container-highest flex items-center justify-center font-bold text-xs">
+                                +12
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary-container rounded-[2rem] overflow-hidden shadow-2xl relative">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed opacity-5 skew-x-12 translate-x-20"></div>
+<div class="relative z-10 p-12 md:p-24 flex flex-col items-center text-center">
+<div class="inline-block py-2 px-6 mb-8 rounded-full bg-secondary-container text-on-secondary-container font-label text-sm tracking-widest font-bold uppercase">Hubungi Kami</div>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-8">
+                    Ingin Menjadi Bagian Dari <br/> <span class="text-secondary-fixed">Kami?</span>
+</h2>
+<p class="text-lg text-primary-fixed-dim max-w-2xl mb-12 font-light">
+                    Jangan ragu untuk bertanya mengenai pendaftaran, jadwal latihan, atau kolaborasi. Tim kami siap membantu Anda mewujudkan bakat musik di lapangan.
+                </p>
+<div class="flex flex-col items-center gap-6">
+<a class="group bg-white text-primary px-10 py-6 rounded-2xl flex items-center gap-6 hover:scale-105 transition-all duration-300 shadow-xl" href="https://wa.me/6285732771060" rel="noopener noreferrer" target="_blank">
+<div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-4xl">call</span>
+</div>
+<div class="text-left">
+<p class="text-sm font-label font-bold uppercase tracking-wider text-slate-500">Contact Person</p>
+<p class="text-3xl font-headline font-black tracking-tight group-hover:text-primary transition-colors">085732771060</p>
+</div>
+</a>
+<p class="text-primary-fixed-dim text-sm italic font-light">Tersedia via WhatsApp &amp; Telepon (Senin - Sabtu)</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-100 py-12 w-full tonal-layering">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto space-y-8 md:space-y-0">
+<div class="space-y-2">
+<div class="font-headline font-bold text-blue-900 text-2xl">Six Marching</div>
+<p class="font-label text-sm tracking-wide uppercase text-slate-500">© 2024 Six Marching. Presisi &amp; Kemegahan.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-sm tracking-wide uppercase text-slate-500 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Kebijakan Privasi</a>
+<a class="font-label text-sm tracking-wide uppercase text-slate-500 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-label text-sm tracking-wide uppercase text-slate-500 hover:underline transition-all opacity-80 hover:opacity-100" href="#contact">Hubungi Kami</a>
+<a class="font-label text-sm tracking-wide uppercase text-slate-500 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Media Sosial</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">music_video</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
